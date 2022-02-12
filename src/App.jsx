@@ -7,7 +7,7 @@ import Todo from './components/Todo';
 function App() {
   return (
     <>
-      <Todo />
+      <Todo title="Todo Application (REACT.JS)" section="Your Todo Lists" />
     </>
   );
 }

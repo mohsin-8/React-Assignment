@@ -1,0 +1,10 @@
+.main_heading {
+  border-bottom: 5px solid green;
+  line-height: 3.3rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.list {
+  list-style-type: none;
+}
