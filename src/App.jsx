@@ -1,10 +1,15 @@
 import React from 'react';
 import './App.css';
 
+// Component
+// import MainPractice from './Components/MainPractice';
+import WeatherPage from './Components/WeatherPage';
+
 function App() {
   return (
     <>
-      <h1>Hello World</h1>
+      {/* <MainPractice /> */}
+      <WeatherPage />
     </>
   );
 }
