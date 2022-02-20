@@ -1,0 +1,10 @@
+.button {
+  background-color: rgb(233, 233, 0) !important;
+  border-color: rgb(233, 233, 0) !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+}
+
+.bgImg {
+  background-image: url("../Image/bg_img.jpg");
+}
