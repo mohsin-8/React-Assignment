@@ -1,0 +1,15 @@
+.bg_dark {
+  background-color: #212529 !important;
+  color: #f1f1f1;
+}
+
+.info {
+  background-color: #212529 !important;
+  color: #f1f1f1 !important;
+  padding: 20px;
+}
+
+.bold {
+  font-weight: bold;
+  color: gray;
+}
