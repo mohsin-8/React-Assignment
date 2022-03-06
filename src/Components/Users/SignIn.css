@@ -1,0 +1,16 @@
+.signin {
+  background-image: url("../../Images/login.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card {
+  background-color: rgba(35, 98, 170, 0.63) !important;
+}
+
+.goToSignUp {
+  color: #f1f1f1;
+  padding: 10px 0px;
+  text-align: center;
+}
