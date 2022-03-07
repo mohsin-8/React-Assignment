@@ -1,3 +1,16 @@
 .card {
   padding: 50px;
+  background-color: rgba(34, 87, 185, 0.733) !important;
+}
+
+.title p {
+  font-weight: bold;
+  font-size: 18px;
+  word-break: break-all;
+}
+
+.desc p {
+  font-weight: 500;
+  font-size: 17px;
+  word-break: break-all;
 }
