@@ -1,22 +1,20 @@
 import React from 'react';
-// import { Routes, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
-// Components
-import Todo from './Components/Todo/Todo';
-// import SignIn from './Components/Users/SignIn';
-// import SignUp from './Components/Users/SignUp';
+// import components
+import SignIn from './Components/Users/SignIn';
+import SignUp from './Components/Users/SignUp';
+import Todo from './Components/Todos/Todo';
+import UserInformation from './Components/Users/UserInformation';
 
 const App = () => {
   return (
     <>
-
-      {/* <Routes> */}
-      {/* <Route path="/" element={<SignIn title="Sign In" />} />
-        <Route path="/signup" element={<SignUp title="Register your account" />} /> */}
-      {/* <Route path="/" element={<Todo title="Your Todos 📓" />} /> */}
-      <Todo title="Your Todos 📓" />
-      {/* </Routes> */}
-
+      <Routes>
+        <Route path="/" element={<SignIn />} />
+        <Route path="/registration" element={<SignUp />} />
+        <Route path="/todos" element={<Todo title="Todo App" />} />
+      </Routes>
     </>
   )
 }

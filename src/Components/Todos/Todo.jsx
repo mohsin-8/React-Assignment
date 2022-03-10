@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import './Todo.css';
 import { addDoc, collection, deleteDoc, doc, getDocs, updateDoc } from 'firebase/firestore';
 import { db } from '../../config/firebase';
+import SignOut from '../Users/SignOut';
 
 const Todo = ({ title }) => {
     const [istitle, setTitle] = useState("");
     const [isdesc, setDesc] = useState('');
     const [istodos, setTodos] = useState([]);
+    const [refresh, setRefresh] = useState(false);
 
     const todoCollectionRef = collection(db, "todos")
 
@@ -18,7 +20,7 @@ const Todo = ({ title }) => {
             desc: isdesc
         });
         // console.log(todoCollectionRef);
-
+        setRefresh(!refresh);
         setTitle("");
         setDesc("");
 
@@ -32,13 +34,16 @@ const Todo = ({ title }) => {
             title: prompt("Update title", title),
             desc: prompt("Update Description", desc),
         };
-
         await updateDoc(todoDoc, update);
+        setRefresh(!refresh);
+
     };
 
     const deleteTodo = async (id) => {
         const todoDoc = doc(db, "todos", id);
         await deleteDoc(todoDoc);
+        setRefresh(!refresh);
+
     }
 
     useEffect(() => {
@@ -48,10 +53,11 @@ const Todo = ({ title }) => {
             console.log(data);
         };
         getTodos();
-    }, []);
+    }, [refresh]);
 
     return (
         <div className='container'>
+            <SignOut />
             <div className="intro my-5">
                 <h1 className='text-center'>
                     {title}
@@ -59,7 +65,7 @@ const Todo = ({ title }) => {
             </div>
 
             <div className="container todos">
-                <div className="card">
+                <div className="card todo_card">
                     <form onSubmit={handleSubmit}>
                         <input
                             type="text"
